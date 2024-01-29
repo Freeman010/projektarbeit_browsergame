@@ -4,6 +4,7 @@ Ressourcen : Erz, Chemikalien, Treibstoff, Energie, Munition
 Zivilgebäude
 
 Bergwerk erzeugt je nach einstellung und stufe eisenerz und chemikalien
+Nexus , erhöht ressourcen um 5% und schaltet ressurcenvertteilung frei
 Treibstofffabrik benötigt treibstoff
 Raffinerie benötigt erz
 Kraftwerk benötigt treibstoff
@@ -109,6 +110,12 @@ ist der verlierer ein planet und es bleibt schrott übrig den die angriffsflotte
 dann wandert der übrige schrott direkt in das inventar des verteidigers
 
 Details
+
+Funktion Mehrfachfeuer
+wenn z.b. der leichte jäger ein mehrfachfeuer von 3 gegen schlachtschiffe hat und ein schlachtschiff angreift,
+dann greift der leichte jäger das schlachtschiff 3 weitere male an , wenn das schlachtschiff schon tod sein sollte,
+dann sucht sich der leichte jäger per zufall ein weiteres schlachtschiff aus der gegnerflotte und wendet darauf übriggebliebenes mehrfachfeuer an.
+wenn es keine schlachtschiffe gibt , dann wird nach zufall entschieden was das nächste ziel ist
 
 Werte für schiffe
 
@@ -272,16 +279,19 @@ WERTE
 
 kleiner Transporter
 
-Stahlkosten: 300
+Stahlkosten: 400
 Chemikalienkosten:50
 Energiekosten:100
 
 Feuerkraft:20
-Hülle:2000
+Hülle:4000
 Schild:0
+Geschwindigkeit: 100
+Treibstoffverbrauch: 5
+Munitionsverbrauch: 1
 
 Frachtraum:2000
-Hangar:muss sich im hangar befinden um das sonnensystem verlassen zu können
+Hangar:muss sich im hangar befinden um das sonnensystem verlassen zu können, verbraucht 2 slots
 
 Angriffsbonus gegen nichts
 mehrfachfeuer gegen nichts
@@ -290,13 +300,72 @@ mehrfachfeuer von Kreuzer : 50% chance auf einen weiteren angriff
 Verteidigungsbonus : 
 20% mehr schaden von leichten jägern
 30% mehr schaden von schweren jägern
-20% weniger schaden von bombern
+50% weniger schaden von bombern
 50% weniger schaden von Zerstörern
 99% weniger schaden von schlachtschiffen
 
-Treibstoffverbrauch:50
-Munitionsverbrauch: 1
+leichter jäger
 
+Stahlkosten: 200
+Chemikalienkosten:50
+Energiekosten:100
+
+Feuerkraft:100
+Hülle:2000
+Schild:0
+Geschwindigkeit: 200
+Treibstoffverbrauch: 5
+Munitionsverbrauch: 5
+
+Frachtraum:200
+Hangar:muss sich im hangar befinden um das sonnensystem verlassen zu können, verbraucht 1 slot
+
+Angriffsbonus gegen kleine transporter 20%
+Angriffsbonus gegen Bomber 50%
+mehrfachfeuer gegen Schlachtschiff 3x
+mehrfachfeuer gegen Schlachtkreuzer 3x
+mehrfachfeuer von Flugdeckkreuzer 3x
+mehrfachfeuer von kreuzer 5x
+mehrfachfeuer von Kreuzer : 50% chance auf einen weiteren angriff
+
+Verteidigungsbonus : 
+20% mehr schaden von leichten jägern
+30% mehr schaden von schweren jägern
+90% weniger schaden von bombern
+80% weniger schaden von Zerstörern
+99% weniger schaden von schlachtschiffen
+
+
+Flugdeckkreuzer
+
+Stahlkosten: 20000
+Chemikalienkosten:50
+Energiekosten:100
+
+Feuerkraft:1000
+Hülle:200000
+Schild:100000
+Geschwindigkeit: 200
+Treibstoffverbrauch: 800
+Munitionsverbrauch: 5
+
+Frachtraum:20000
+Hangar:hat 200 slots für kleine schiffe
+
+Angriffsbonus gegen leichte jäger:120%
+Angriffsbonus gegen schwere jäger:100%
+Angriffsbonus gegen bomber:100%
+Angriffsbonus gegen kleine transporter:100%
+mehrfachfeuer gegen leichte jäger:5
+mehrfachfeuer gegen schwere jäger: 
+mehrfachfeuer von Kreuzer : 50% chance auf einen weiteren angriff
+
+Verteidigungsbonus : 
+20% mehr schaden von leichten jägern
+30% mehr schaden von schweren jägern
+20% weniger schaden von bombern
+50% weniger schaden von Zerstörern
+99% weniger schaden von schlachtschiffen
 leichter Jäger
 schwerer Jäger
 Bomber
