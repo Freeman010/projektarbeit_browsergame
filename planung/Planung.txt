@@ -1,0 +1,113 @@
+benötigen folgenden Inhalt
+
+Login Seite
+Hauptspielbereich
+Technologieübersicht
+Evtl einen Settingsbereich
+
+Login Seite :
+Startbildschirm beim betreten der Seite,
+ dort kann man direkt anmelde/registrierungsdaten angeben
+
+/beim erfolgreichem login weiter zum Hauptspielbereich
+/bei gescheitertem lgin seite zurücksetzen und eine "Login Fehlgeschlagen message senden"
+/beim registrieren 
+//erfolgreich , anzeige das die registrierung erfolgreich war, Daten an den server senden
+//nicht erfolgreich , seite zurücksetzen und eine Registrierung Fehlgeschlagen message senden (muss vom server gecheckt werden)
+
+Hauptspielbereich 
+Nav leiste die auf jeder seite gleich sein soll
+dafür eine Css anlegen die auf allen seiten genutzt werden kann
+Nav leiste sollte beinhalten :
+Übersicht (ressourcenanzeige, anzahl planeten , flottenbewegungen/eingehende angriffe etc wie bei ogame)
+kleines icon über jedem planeten der grade etwas baut
+highscore
+Logout button
+Settings
+
+/Zivilgebäude Bauübersicht
+Beim Anklicken der gebäude detailanzeige über dauer/kosten/bauvoraussetzungen
+Pro gebäude eine extra html seite erstellen mit details, oder ein extra anzeigefenster
+.Bergwerk
+.Treibstofffabrik
+.Kraftwerk
+.Solaranlage
+.treibstoffdepot
+.chemikaliendepot
+.Erzdepot
+.Energiespeicher(kann nicht geplündert werden)
+.Stahldepot
+.Forschungsdistrikt
+
+
+/Militärgebäude Bauübersicht
+Beim Anklicken der gebäude detailanzeige über dauer/kosten/bauvoraussetzungen oder ein extra anzeigefenster
+Pro gebäude eine extra html seite erstellen mit details
+.Spionagezentrum
+.Munitionsfabrik
+.kleine Raumwerft
+.Mittelgroße Raumwerft
+.große Raumwerft
+.MunitionsDepot
+.Recycler
+.Schrottplatz
+
+/Verteidigung
+Werden in verschiedenen Raumwerfen mitproduziert
+Verteidigungsproduktion in einer seite anzeigen 
+Beim Anklicken der gebäude detailanzeige über dauer/kosten/bauvoraussetzungen,
+werte(atk def schild etc) oder ein extra anzeigefenster
+Pro Verteidigung extra seite erstellen für details techtree etc
+
+kleine raumwerft :Flakgeschütz, Lasergeschütz
+mittlere raumwerft:Ionenkanone, Artillerie
+große raumwerft: Partikelkanone, Railgun, Planetarer Schildgenerator
+
+/Raumkarte
+wie bei ogame nur mit 20 planeten pro system
+müssen eine seite als blueprint erstellen und mit javascript duplizieren und füllen lassen 
+
+/Übersicht Militärexpeditionen angriffe etc  armada
+Zeigt Aktuelle flotten an, die auf dem planeten sind ,
+welche flotten grade unterwegs sind , 
+eingehende flotten (angriffe transporte)
+expeditionen etc
+
+Gesamtzahl schiffe auf allen planeten zusammengezählt anzeigen lassen 
+in klammern hinter den auf dem planeten stationierten schiffen aktuell
+
+/Ressourcenmanager (produktion von ressourcengebäude verwalten)
+Einstellungen der ressourcenproduktion von folgenden gebäuden:
+Werte gebäudegesamtleistung kann in 10% schritten bis auf 0 runtergefahren werden
+
+Bergwerk:
+benötigt energie zum arbeiten
+kann zum beispiel 70% leistung auf eisenerz legen und 30% auf chemikalien
+
+Treibstofffabrik benötigt chemikalien und energie zum arbeiten
+kann auch runtergeregelt werden um energie und chemikalien zu sparen
+
+Raffinerie 
+benötigt erz und energie und wandelt es in stahl um 
+kann abgeschaltet werden um energie und erz zu sparen (in 10% schritten)
+
+Kraftwerk benötigt treibstoff
+kann abgeschaltet werden um energie und treibstoff zu sparen (in 10% schritten)
+
+solaranlage benötigt nichts
+kann nicht abgeschaltet werden 
+
+Munitionsfabrik benötigt chemikalien und stahl
+kann abgeschaltet werden um chemikalien und stahl zu sparen
+
+Recycler benötigt schrott und energie , generiert eisenerz 90% und 10% chemikalien
+kann abgeschaltet werden um energie und schrott zu sparen (in 10% schritten)
+macht auch sinn falls die lager voll sind 
+
+Spionagezentrum (spionage kostet treibstoff und energie)
+muss manuell betätigt werden kann nicht abgeschaltet werden da es nur bei aktivierung verbraucht
+/Freundesliste/Verbündete
+
+
+
+

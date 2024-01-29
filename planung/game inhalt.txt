@@ -1,0 +1,324 @@
+Ressourcen : Erz, Chemikalien, Treibstoff, Energie, Munition
+
+
+Zivilgebäude
+
+Bergwerk erzeugt je nach einstellung und stufe eisenerz und chemikalien
+Treibstofffabrik benötigt treibstoff
+Raffinerie benötigt erz
+Kraftwerk benötigt treibstoff
+solaranlage benötigt nichts
+Munitionsfabrik benötigt chemikalien
+Recycler benötigt schrott und energie , generiert eisenerz 90% und 10% chemikalien
+Spionagezentrum (spionage kostet treibstoff und energie)
+
+treibstoffdepot
+chemikaliendepot
+Erzdepot
+Munitionsdepot
+Energiespeicher(kann nicht geplündert werden)
+Stahldepot
+Schrottplatz
+
+Kleine Raumwerft
+mittlere Raumwerft
+große Raumwerft
+
+Forschungsdistrikt
+
+MILITÄR
+
+Kleine schiffswerft produziert leichte Jäger, schwere Jäger , Fregatte, Bomber
+mittelgroße Schiffswerft produziert Zerstörer, Kreuzer , Flugdeckkreuzer, Kolonieschiff, großer Transporter
+Große Schiffswerft
+
+kleiner Transporter
+leichter Jäger
+schwerer Jäger
+Bomber
+Fregatte
+Miningdrohne
+
+großer Transporter
+Zerstörer
+Kreuzer
+Flugdeckkreuzer kann leichte/schwere jäger und bomber mitnehmen
+Kolonieschiff  wird benötigt um planeten zu erschliessen und/oder zum erobern
+Bergbauschiff kann miningdrohnen mitnehmen
+
+Schlachtschiff
+Trägerschiff kann leichte/schwere jäger und bomber mitnehmen
+Schlachtkreuzer
+
+Verteidigung
+
+Flakgeschütz
+Ionenkanone
+Lasergeschütz
+Railgun
+Partikelkanone
+Planetarer Schildgenerator
+
+Allgemein :
+maximal 10 planeten pro system 
+unbegrenzt bauplatz pro planet
+Gebäude werden wie bei ogame mit stufen ausgebaut ohne stückzahl
+Gebäude werden mit jeder stufe teurer
+
+Planeten sind immer da 
+Expedition zum planeten um ressourcen zu schürfen für z.b. 12stunden
+planeten können besiedelt werden
+ist ein spieler drauf dann kann er erobert werden
+
+
+Grobe Übersicht militär
+
+kampfeinheiten haben beim kampf gegen bestimmte gegner buffs oder debuffs 
+z.b. 
+Kampf 10 leichte jäger gegen 10 schlachtschiffe
+
+leichte jäger haben 10% mehr dmg gegen schlachtschiffe
+schlachtschiffe haben 99% weniger dmg gegen leichte jäger
+leichte jäger fügen mit einer 50% einen weiteren angriff aus
+schlachtschiffe führen mit einer 0% chance einen weiteren angriff gegen jäger aus
+
+
+Kampfsystem
+ähnnlich wie bei ogame
+
+z.b. wenn 2 flotten kämpfen
+vom angreifer greifen 5% der gesamtflotte(abgerundet)an
+die 5% werden per zufall bestimmt , die angriffsziele ebenso
+anschliessend macht die gegnerflotte genau das selbe , ab da immer im wechsel bis alle schiffe
+einmal angegriffen haben.
+danach wird der prozess solange wiederholt bis eine seite komplett vernichtet ist 
+ausnahme es wird eine rundenanzahl XY(muss noch festgelegt werden) überschritten 
+danach heisst es rückzug
+weitere ausnahme , dem angreifer geht die munition aus , dann zieht er sich zurück
+geht dem verteidiger die munition aus, verliert er automatisch, aber die übrige flotte bleibt am leben 
+weil sie flüchtet und nach der plünderung zurückkehrt
+
+Schilde regenerieren sich nach jeder runde um 10%
+
+geplündert werden 100% der ressourcen die stationiert waren(bei planetenangriff)
+bei zerstörten schiffen werden 50% der zerstörten schiffe(kumulierte baukosten)
+als schrott zurückgelassen
+dieser schrott wird direkt in den frachtraum des siegers geladen
+sollte der sieger ein planet sein , dann wird alles auf dem planeten gelagert
+ist der verlierer ein planet und es bleibt schrott übrig den die angriffsflotte nicht mitnehmen kann , 
+dann wandert der übrige schrott direkt in das inventar des verteidigers
+
+Details
+
+Werte für schiffe
+
+Stahlkosten
+Chemikalienkosten
+Energiekosten
+
+Feuerkraft
+Hülle
+Schild
+
+Frachtraum
+
+// die nächsten 4 werte würde ich in einer detailansicht für die jeweilige unit packen
+Angriffsbonus gegen schiff/verteidigung XY
+mehrfachfeuer gegen schiff/verteidigung XY
+mehrfachfeuer gegen schiff/verteidigung XY
+Verteidigungsbonus gegen schiff/verteidigung XY
+
+Treibstoffverbrauch
+Munitionsverbrauch
+
+FORSCHUNG
+
+Bergbau
+Funktechnik
+Panzerung 
+Schildtechnik
+Ballistik
+Energiewaffen
+Verbrennungstriebwerke
+Sprungantrieb
+
+
+kleiner Transporter
+Forschung : benötigt kleine raumwerft stufe 1
+Forschung : benötigt verbrennungstriebwerke stufe 1
+Forschung : benötigt Panzerung stufe 2
+
+leichter Jäger
+Forschung : benötigt kleine raumwerft stufe 1
+Forschung : benötigt verbrennungstriebwerke stufe 3
+Forschung : benötigt Panzerung stufe 1
+Forschung : benötigt Ballistik stufe 1 
+
+schwerer Jäger
+Forschung : benötigt kleine raumwerft stufe 3
+Forschung : benötigt verbrennungstriebwerke stufe 5
+Forschung : benötigt Panzerung stufe 4
+Forschung : benötigt Ballistik stufe 3
+Forschung : benötigt Schildtechnik stufe 1
+
+Bomber
+Forschung : benötigt kleine raumwerft stufe 4
+Forschung : benötigt verbrennungstriebwerke stufe 6
+Forschung : benötigt Panzerung stufe 4
+Forschung : benötigt Ballistik stufe 6 
+Forschung : benötigt Schildtechnik stufe 1
+
+Fregatte
+Forschung : benötigt kleine raumwerft stufe 6
+Forschung : benötigt verbrennungstriebwerke stufe 5
+Forschung : benötigt Panzerung stufe 5
+Forschung : benötigt Ballistik stufe 5 
+Forschung : benötigt Sprungantrieb stufe 1
+Forschung : benötigt Schildtechnik stufe 2
+
+Miningdrohne
+Forschung : benötigt Bergbau stufe 3
+Forschung : benötigt Verbrennungstriebwerke stufe 3
+Forschung : benötigt Panerung stufe 3
+Forschung : benötigt Schildtechnik stufe 1
+
+großer Transporter
+Forschung : benötigt mittlere raumwerft stufe 1
+Forschung : benötigt verbrennungstriebwerke stufe 4
+Forschung : benötigt Panzerung stufe 4
+Forschung : benötigt Sprungantrieb stufe 2
+Forschung : benötigt Schildtechnik stufe 4
+Forschung : benötigt Ballistik stufe 3
+
+Zerstörer
+Forschung : benötigt mittlere raumwerft stufe 5
+Forschung : benötigt verbrennungstriebwerke stufe 7
+Forschung : benötigt Panzerung stufe 7
+Forschung : benötigt Sprungantrieb stufe 4
+Forschung : benötigt Schildtechnik stufe 6
+Forschung : benötigt Ballistik stufe 3
+Forschung : benötigt Energiewaffen stufe 3
+
+Kreuzer
+Forschung : benötigt mittlere raumwerft stufe 3
+Forschung : benötigt verbrennungstriebwerke stufe 6
+Forschung : benötigt Panzerung stufe 6
+Forschung : benötigt Sprungantrieb stufe 3
+Forschung : benötigt Schildtechnik stufe 7
+Forschung : benötigt Ballistik stufe 7
+
+Flugdeckkreuzer kann leichte/schwere jäger und bomber mitnehmen
+Forschung : benötigt Funktechnik stufe 3
+Forschung : benötigt mittlere raumwerft stufe 6
+Forschung : benötigt verbrennungstriebwerke stufe 8
+Forschung : benötigt Panzerung stufe 8
+Forschung : benötigt Sprungantrieb stufe 5
+Forschung : benötigt Schildtechnik stufe 8
+Forschung : benötigt Ballistik stufe 7
+
+Kolonieschiff  wird benötigt um planeten zu erschliessen und/oder zum erobern
+Forschung : benötigt Funktechnik stufe 3
+Forschung : benötigt mittlere raumwerft stufe 5
+Forschung : benötigt verbrennungstriebwerke stufe 6
+Forschung : benötigt Panzerung stufe 5
+Forschung : benötigt Sprungantrieb stufe 4
+Forschung : benötigt Schildtechnik stufe 5
+Forschung : benötigt Ballistik stufe 4
+
+Bergbauschiff kann miningdrohnen mitnehmen
+Forschung : benötigt Funktechnik stufe 2
+Forschung : benötigt mittlere raumwerft stufe 4
+Forschung : benötigt verbrennungstriebwerke stufe 5
+Forschung : benötigt Panzerung stufe 4
+Forschung : benötigt Sprungantrieb stufe 4
+Forschung : benötigt Schildtechnik stufe 5
+Forschung : benötigt Bergbau stufe 6
+
+Schlachtschiff
+Forschung : benötigt große raumwerft stufe 1
+Forschung : benötigt verbrennungstriebwerke stufe 10
+Forschung : benötigt Panzerung stufe 10
+Forschung : benötigt Sprungantrieb stufe 8
+Forschung : benötigt Schildtechnik stufe 8
+Forschung : benötigt Ballistik stufe 10
+Forschung : benötigt Energiewaffen stufe 8
+
+Trägerschiff kann leichte/schwere jäger und bomber mitnehmen
+Forschung : benötigt Funktechnik stufe 6
+Forschung : benötigt große raumwerft stufe 5
+Forschung : benötigt verbrennungstriebwerke stufe 12
+Forschung : benötigt Panzerung stufe 10
+Forschung : benötigt Sprungantrieb stufe 10
+Forschung : benötigt Schildtechnik stufe 14
+Forschung : benötigt Ballistik stufe 10
+
+Schlachtkreuzer
+Forschung : benötigt große raumwerft stufe 2
+Forschung : benötigt verbrennungstriebwerke stufe 10
+Forschung : benötigt Panzerung stufe 10
+Forschung : benötigt Sprungantrieb stufe 8
+Forschung : benötigt Schildtechnik stufe 12
+Forschung : benötigt Ballistik stufe 12
+Forschung : benötigt Energiewaffen stufe 10
+
+Flakgeschütz
+Ionenkanone
+Lasergeschütz
+Railgun
+Partikelkanone
+Planetarer Schildgenerator
+
+WERTE 
+
+kleiner Transporter
+
+Stahlkosten: 300
+Chemikalienkosten:50
+Energiekosten:100
+
+Feuerkraft:20
+Hülle:2000
+Schild:0
+
+Frachtraum:2000
+Hangar:muss sich im hangar befinden um das sonnensystem verlassen zu können
+
+Angriffsbonus gegen nichts
+mehrfachfeuer gegen nichts
+mehrfachfeuer von Kreuzer : 50% chance auf einen weiteren angriff
+
+Verteidigungsbonus : 
+20% mehr schaden von leichten jägern
+30% mehr schaden von schweren jägern
+20% weniger schaden von bombern
+50% weniger schaden von Zerstörern
+99% weniger schaden von schlachtschiffen
+
+Treibstoffverbrauch:50
+Munitionsverbrauch: 1
+
+leichter Jäger
+schwerer Jäger
+Bomber
+Fregatte
+Miningdrohne
+
+großer Transporter
+Zerstörer
+Kreuzer
+Flugdeckkreuzer kann leichte/schwere jäger und bomber mitnehmen
+Kolonieschiff  wird benötigt um planeten zu erschliessen und/oder zum erobern
+Bergbauschiff kann miningdrohnen mitnehmen
+
+Schlachtschiff
+Trägerschiff kann leichte/schwere jäger und bomber mitnehmen
+Schlachtkreuzer
+
+Verteidigung
+
+Flakgeschütz
+Ionenkanone
+Lasergeschütz
+Railgun
+Partikelkanone
+Planetarer Schildgenerator
