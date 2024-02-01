@@ -1,30 +1,7 @@
 import Unit from './unit.js';
 import Battlesystem from './battlesystem.js';
 
-export default{
-LeichterJaeger,
-SchwererJaeger,
-Bomber,
-KleinerTransporter,
-MiningDrohne,
-Fregatte,
-GrosserTransporter,
-Zerstörer,
-Kreuzer,
-FlugDeckKreuzer,
-KolonieSchiff,
-BergBauSchiff,
-SchlachtSchiff,
-SchlachtKreuzer,
-FlakGeschütz,
-Artillerie,
-IonenKanone,
-LaserGeschütz,
-Railgun,
-PartikelKanone,
-PlanetarerSchildGenerator
 
-};
 
 class LeichterJaeger extends Unit {
   constructor() {
@@ -212,7 +189,7 @@ class KolonieSchiff extends Unit {
     this.cargo = 50;
     this.unittype = Unit.unittype.schwererjäger;
   }
-}  
+}
 class BergBauSchiff extends Unit {
   constructor() {
     super();
@@ -400,7 +377,30 @@ class PlanetarerSchildGenerator extends Unit {
     this.unittype = Unit.unittype.schwererjäger;
   }
 }
+export default {
+  LeichterJaeger,
+  SchwererJaeger,
+  Bomber,
+  KleinerTransporter,
+  MiningDrohne,
+  Fregatte,
+  GrosserTransporter,
+  Zerstörer,
+  Kreuzer,
+  FlugDeckKreuzer,
+  KolonieSchiff,
+  BergBauSchiff,
+  SchlachtSchiff,
+  SchlachtKreuzer,
+  FlakGeschütz,
+  Artillerie,
+  IonenKanone,
+  LaserGeschütz,
+  Railgun,
+  PartikelKanone,
+  PlanetarerSchildGenerator
 
+};
 
 
 const schwererJaegerInstance = new SchwererJaeger();
@@ -410,7 +410,7 @@ const leichterjägerInstance = new SchwererJaeger();
 schwererJaegerInstance.steelcosts = 5000;
 leichterjägerInstance.firepower = 9000;
 const f = new Battlesystem();
-f.attackunit(schwererJaegerInstance,leichterjägerInstance);
+f.attackunit(schwererJaegerInstance, leichterjägerInstance);
 
 /*function printUnitType(instance,) {
   if(instance.unittype = 2) {}
