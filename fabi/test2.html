@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Übergeordnetes Raster mit benannten Bereichen</title>
+    <style>
+      /* Container für das CSS-Raster */
+      .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; /* 3 gleichgroße Spalten */
+        gap: 10px; /* Abstand zwischen Rasterelementen */
+        grid-template-areas:
+          "header header rechtsgelb"
+          "sidebar main main"
+          "footer footer footer";
+      }
+
+      .rechtsgelb {
+        border: 1px solid blue;
+        grid-area: rechtsgelb;
+        background: yellow;
+      }
+
+      /* Kind-Elemente mit zugewiesenen Rasterbereichen */
+      .header {
+        grid-area: sidebar; /* Benennung des Rasterbereichs 'header' */
+        background-color: #3498db;
+        padding: 20px;
+        color: white;
+      }
+
+      .sidebar {
+        grid-area: header; /* Benennung des Rasterbereichs 'sidebar' */
+        background-color: #e74c3c;
+        padding: 20px;
+        color: white;
+      }
+
+      .main {
+        grid-area: main; /* Benennung des Rasterbereichs 'main' */
+        background-color: #2ecc71;
+        padding: 20px;
+        color: white;
+      }
+
+      .footer {
+        grid-area: footer; /* Benennung des Rasterbereichs 'footer' */
+        background-color: #f39c12;
+        padding: 20px;
+        color: white;
+      }
+
+      /* Zusätzliche Stile für das Beispiel */
+      h1 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Übergeordnetes Raster mit benannten Bereichen</h1>
+    <p>
+      In diesem Beispiel erstellen wir ein Raster-Übergeordnetes Element mit
+      Hilfe von CSS Grid und weisen benannte Rasterbereiche den Kind-Elementen
+      zu.
+    </p>
+    <div class="grid-container">
+      <div class="header">Kopfzeile</div>
+      <div class="rechtsgelb">Rechtsgelb</div>
+      <div class="sidebar">Seitenleiste</div>
+      <div class="main">Hauptinhalt</div>
+      <div class="footer">Fußzeile</div>
+    </div>
+  </body>
+</html>
