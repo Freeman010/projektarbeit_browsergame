@@ -1,0 +1,30 @@
+* {
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #8D867B;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.head-bar {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    background-color: #0e1b24;
+    border-bottom: 2px solid #72203B;
+}
+
+.head-text-left {
+}
+
+p {
+    font-family: 'Inconsolata', monospace, sans-serif;
+    font-weight: 600;
+    color: #8D867B;
+}
