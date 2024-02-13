@@ -2,6 +2,10 @@
     margin: auto;
 }
 
+body {
+    background-image: url("img/background/background-a.jpg");
+}
+
 a {
     text-decoration: none;
     color: #8D867B;
@@ -34,4 +38,18 @@ p {
     font-family: 'Inconsolata', monospace, sans-serif;
     font-weight: 600;
     color: #8D867B;
+}
+
+.ressorcen img{
+    width: 70px;
+}
+
+.ressorcen {
+    width: 40%;
+    padding: 10px;
+    display: flex;
+}
+
+.extra-space {
+    padding: 0 80px 0 0;
 }
