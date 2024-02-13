@@ -6,12 +6,12 @@ body {
     background-image: url("img/background/background-a.jpg");
 }
 
-a {
+header a {
     text-decoration: none;
     color: #8D867B;
 }
 
-a:hover {
+header a:hover {
     text-decoration: none;
     color: #fff;
 }
@@ -22,10 +22,6 @@ a:hover {
     padding: 5px;
     background-color: #0e1b24;
     border-bottom: 2px solid #72203B;
-}
-
-.head-text-left {
-
 }
 
 p {
@@ -40,7 +36,7 @@ p {
     color: #8D867B;
 }
 
-.ressorcen img{
+.ressorcen img {
     width: 70px;
 }
 
@@ -48,8 +44,27 @@ p {
     width: 40%;
     padding: 10px;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .extra-space {
     padding: 0 80px 0 0;
+}
+
+.planets {
+    width: 40%;
+    display: flex;
+
+}
+
+.planets img {
+    width: 100px;
+    margin-top: 30px;
+}
+
+.main-box {
+    width: 40%;
+    height: 1000px;
+    position: relative;
+    background-color: #0e1b24;
 }
