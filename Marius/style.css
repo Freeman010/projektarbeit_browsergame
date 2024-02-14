@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+a {
+  color: white;
+}
+
+body {
+  background-image: url("img/background/background-a.jpg");
+}
+
+/* Header-Bereich */
+
+header {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.head-bar {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  width: 60vw;
+}
+
+.player {
+  display: flex;
+  justify-content: center;
+  width: 30vw;
+}
+
+.clock {
+  width: 10vw;
+  color: white;
+}
+
+/* Ressourcen-Bereich
+1. Elternteil "ressources" erhält 100vw
+2. Kinder "raw-material" und "products" 80vw
+hier ist folgendes zu beachten:
+Beim verkleinern des Bildschirms, gehen die Enkelkinder 
+ineinander über und verformen sich -> evtl. "space-evenly" mit gap ersetzen,
+oder feste  Pixelwerte festlegen*/
+
+/* Elternteil */
+.ressources {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+/* Kinder */
+
+.raw-material {
+  background: rgba(255, 255, 0, 0.315);
+  width: 20vw;
+  height: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.products {
+  background: rgba(0, 128, 0, 0.301);
+  width: 60vw;
+  height: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* Enkelkinder */
+
+.raw,
+.prod {
+  width: 4rem;
+  height: 4rem;
+  margin: 0.5rem;
+  background: grey;
+  border: 2px solid black;
+  box-sizing: border-box;
+}
+
+.planete-bar {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.planetes {
+  width: 80vw;
+  height: 100px;
+  background: rgba(0, 0, 255, 0.315);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.planet {
+  width: 100px;
+  height: 100px;
+  border: 2px white dotted;
+}
