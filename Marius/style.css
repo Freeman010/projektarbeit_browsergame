@@ -52,6 +52,7 @@ oder feste  Pixelwerte festlegen*/
   width: 100vw;
   display: flex;
   justify-content: center;
+  border: 2px dotted white;
 }
 
 /* Kinder */
@@ -86,11 +87,23 @@ oder feste  Pixelwerte festlegen*/
   box-sizing: border-box;
 }
 
+/* Elternteil  */
+
+.section2 {
+  position: relative;
+}
+
 .planete-bar {
   width: 100vw;
+  height: 100px;
   display: flex;
   justify-content: center;
+  position: absolute;
+  z-index: -1;
+  border: 2px dotted white;
 }
+
+/* Kinder */
 
 .planetes {
   width: 80vw;
@@ -102,8 +115,69 @@ oder feste  Pixelwerte festlegen*/
   gap: 20px;
 }
 
+/* Enkelkinder */
+
 .planet {
   width: 100px;
   height: 100px;
   border: 2px white dotted;
+  border-radius: 50%;
+}
+
+/* Elternteil */
+
+.main-content {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  border: 2px dotted white;
+}
+
+/* Kinder */
+
+.menu-box {
+  min-width: 300px;
+  height: 400px;
+  background: rgba(255, 153, 0, 0.425);
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  align-self: center;
+}
+
+.content-box {
+  min-width: 1000px;
+  height: 750px;
+  background: rgba(230, 35, 35, 0.527);
+  border: 1px solid black;
+  margin: 0 25px;
+}
+
+.chat-box {
+  width: 10vw;
+  height: 500px;
+  background: rgba(255, 0, 128, 0.445);
+  border: 1px solid black;
+  align-self: center;
+}
+
+/* Buttons */
+
+.btn {
+  width: 100px;
+  height: 35px;
+  background: grey;
+}
+
+/* Footer */
+
+footer {
+  width: 100vw;
+  height: 100px;
+  background: rgba(128, 128, 128, 0.295);
+  margin-top: 50px;
 }
