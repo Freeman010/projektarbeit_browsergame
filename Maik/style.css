@@ -17,6 +17,7 @@ header a:hover {
 }
 
 .head-bar {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     padding: 5px;
@@ -41,10 +42,9 @@ p {
 }
 
 .ressorcen {
-    width: 40%;
+    width: 45%;
     padding: 10px;
     display: flex;
-    flex-wrap: wrap;
 }
 
 .extra-space {
@@ -53,18 +53,134 @@ p {
 
 .planets {
     width: 40%;
+    height: 150px;
     display: flex;
-
 }
 
 .planets img {
     width: 100px;
     margin-top: 30px;
+    transition: transform 0.4s;
+}
+
+.planets img:hover {
+    width: 100px;
+    margin-top: 30px;
+    transform: translateY(-30px);
+}
+
+.main-body {
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-box {
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 165px;
+    bottom: 345px;
 }
 
 .main-box {
-    width: 40%;
+    width: 45%;
     height: 1000px;
-    position: relative;
+    margin-top: -60px;
+    border: 2px solid black;
     background-color: #0e1b24;
+    z-index: 2;
+}
+
+.chat-box {
+    background-color: #0e1b24;     
+    width: 300px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    right: 115px;
+    bottom: 295px;
+}
+
+.chat {
+    width: 85%;
+    height: 400px;
+    background-color: #8D867B;
+    border: black 2px solid;
+}
+
+.message-box {
+    background-color: #8D867B;
+    width: 85%;
+    height: 30px;
+}  
+
+.message-box img {
+    margin: 5px 5px 5px 90%;
+}
+
+.nav-box a{
+    width: 200px;
+    height: 50px;
+}
+
+.button-1 {
+    background-image: url(img/BUTTONS_RDY/BEFORE/übersicht_before.png);
+}
+
+.button-1:hover {
+    background-image: url(img/BUTTONS_RDY/after/übersicht_after.png);
+}
+
+.button-2 {
+    background-image: url(img/BUTTONS_RDY/BEFORE/raumkarte_before.png);
+}
+
+.button-2:hover {
+    background-image: url(img/BUTTONS_RDY/AFTER/raumkarte_after.png);
+}
+
+.button-3 {
+    background-image: url(img/BUTTONS_RDY/BEFORE/forschung_before.png);
+}
+
+.button-3:hover {
+    background-image: url(img/BUTTONS_RDY/AFTER/forschung_after.png);
+}
+
+.button-4 {
+    background-image: url(img/BUTTONS_RDY/BEFORE/verteidigung_before.png);
+}
+
+.button-4:hover {
+    background-image: url(img/BUTTONS_RDY/AFTER/verteidigung_after.png);
+}
+
+
+.button-5 {
+    background-image: url(img/BUTTONS_RDY/BEFORE/armada_before.png);
+}
+
+.button-5:hover {
+    background-image: url(img/BUTTONS_RDY/AFTER/armada_after.png);
+}
+
+.button-6 {
+    background-image: url(img/BUTTONS_RDY/BEFORE/zivil_before.png);
+}
+
+.button-6:hover {
+    background-image: url(img/BUTTONS_RDY/AFTER/zivil_after.png);
+}
+
+.button-7 {
+    background-image: url(img/BUTTONS_RDY/BEFORE/militär_before.png);
+}
+
+.button-7:hover {
+    background-image: url(img/BUTTONS_RDY/AFTER/militär_after.png);
 }
