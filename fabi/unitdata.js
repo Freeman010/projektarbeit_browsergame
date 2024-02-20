@@ -1,6 +1,6 @@
 import Unit from './unit.js';
 import Battlesystem from './battlesystem.js';
-
+import { Fleet, Cargo } from "./fleetmanager.js";
 
 
 class LeichterJaeger extends Unit {
@@ -556,7 +556,7 @@ let attacker = [];
 attacker.push(new Kreuzer());
 attacker.push(new Kreuzer());
 //console.log(attacker[0].dmgversusleichterjaeger);
-let defender = [o,p,q,r,s,t,u,v];
+let defender = [o, p, q, r, s, t, u, v,a,b,c,d,e,ff,g,h,i,j,k,l,n,m];
 
 let leichterJaegerArray = [];
 let schwererjaegerarray = [];
@@ -575,12 +575,21 @@ for (let i = 0; i < 100; i++) {
   let schwererjaegerinstance = new SchwererJaeger();
   schwererjaegerarray.push(schwererjaegerinstance);
 }
-bomberarray.push(leichterJaegerArray);
-bomberarray.push(schwererjaegerarray);
+
 
 const f = new Battlesystem();
-f.startwar(bomberarray, defender);
 
+let attackercargo = new Cargo();
+let defendercargo = new Cargo();
+attackercargo.ammo = 100000;
+defendercargo.ammo = 100000;
+
+
+
+let attackerfleet = new Fleet(bomberarray, attackercargo);
+let defenderfleet = new Fleet(defender, defendercargo);
+
+f.startwar(attackerfleet, defenderfleet);
 
 /*
 

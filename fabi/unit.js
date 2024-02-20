@@ -1,3 +1,4 @@
+import { Fleet, Cargo } from "./fleetmanager.js";
 export default class Unit {
   static attackenergy;
   static name;

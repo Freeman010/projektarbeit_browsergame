@@ -1,5 +1,6 @@
 import Unit from './unit.js';
 import unitdata from './unitdata.js';
+import { Fleet, Cargo } from "./fleetmanager.js";
 export default class Battlesystem {
     constructor() {
 
@@ -14,7 +15,7 @@ export default class Battlesystem {
         }
     }
     handlefight(myunit, defenderlist, target, dmgversus, rapidfirevs) {
-        
+
         console.log(myunit.name + " greift " + target.name + " an");
         if (myunit instanceof Unit && target instanceof Unit) {
             if (rapidfirevs != 1) {
@@ -23,16 +24,17 @@ export default class Battlesystem {
                     console.log("der " + target.name + " hat aktuell eine hülle von " + target.hull);
                     console.log(myunit.name + " feuert mit einer feuerkraft von ", myunit.firepower + dmgversus, "auf den ", target.name);
                     target.shield = target.shield - myunit.firepower + dmgversus;
-                    
+
                     if (target.shield <= 0) {
                         target.hull += target.shield;
                         target.shield = 0;
                         console.log("angreifer " + myunit.name, "hat den schild durchbrochen");
 
                         if (target.hull <= 0) {
+
                             
-                            defenderlist.splice(defenderlist.indexOf(target), 1);
                             console.log(target.name + " wurde zerstört");
+                            defenderlist.splice(defenderlist.indexOf(target), 1);
                             break;
                         }
                         console.log(target.name + " hat noch " + target.hull + " hüllenpunkte bevor er zerstört wird");
@@ -41,7 +43,7 @@ export default class Battlesystem {
                         console.log(target.name + " hat noch " + target.shield + " schildpunkte bevor der schild bricht");
                     }
                     myunit.attackenergy = myunit.attackenergy - 100 / rapidfirevs;
-                    if(myunit.attackenergy <= 0){break;}
+                    if (myunit.attackenergy <= 0) { break; }
                 }
             }
             else {
@@ -50,22 +52,22 @@ export default class Battlesystem {
                 if (target.shield <= 0) {
                     target.hull = target.hull + target.shield;
                     target.shield = 0;
-                    console.log(target.shield+"schild");
-                    console.log(target.hull+" hülle")
+                    console.log(target.shield + "schild");
+                    console.log(target.hull + " hülle")
                     if (target.hull <= 0) {
                         console.log(target.name + " wurde zerstört")
-                        defenderlist.splice(target, 1);
-                        
+                        defenderlist.splice(defenderlist.indexOf(target), 1);
+
                     }
-                    else{
+                    else {
                         console.log(target.name + "hat noch " + target.hull + " hüllenpunkte bevor er zerstört wird");
                     }
                 }
                 else {
                     console.log(target.name + "hat noch " + target.shield + " schildpunkte bevor der schild bricht");
                 }
-                
-                
+
+
                 myunit.attackenergy = myunit.attackenergy - 100 / rapidfirevs;
             }
         }
@@ -77,8 +79,7 @@ export default class Battlesystem {
                 if (defenderlist.length <= 0) {
                     break;
                 }
-                if(myunit.attackenergy <= 0)
-                {
+                if (myunit.attackenergy <= 0) {
                     break;
                 }
                 let target = this.searchtarget(defenderlist)
@@ -102,7 +103,7 @@ export default class Battlesystem {
                         break;
                     }
                     case Unit.unittype.kleinertransporter: {
-                        this.handlefight(myunit, defenderlist, target, myunit.dmgversusartillerie,dmgversuskleinertransporter, myunit.rapidfirevskleinertransporter);
+                        this.handlefight(myunit, defenderlist, target, myunit.dmgversusartillerie, dmgversuskleinertransporter, myunit.rapidfirevskleinertransporter);
                         break;
                     }
                     case Unit.unittype.miningdrohne: {
@@ -180,23 +181,26 @@ export default class Battlesystem {
             }
         }
     }
-    startwar(attacker, defender) {
-        if (Array.isArray(attacker) && Array.isArray(defender)) {
-            let attackingships = [...attacker];
+    startwar(attackerfleet, defenderfleet) {
+
+        if (Array.isArray(attackerfleet.fleetarray) && Array.isArray(defenderfleet.fleetarray)) {
+            let attackingships = [...attackerfleet.fleetarray];
             let shipfinishedattack = [];
 
-            for (let i = 0; i < attacker.length; i++) {
+            for (let i = 0; i < attackerfleet.fleetarray.length; i++) {
                 let attackershipnumber = Math.floor(Math.random() * attackingships.length);
 
-                if (defender.length <= 0) { break; }
-                this.attackunit(attackingships[attackershipnumber], defender);
+                if (defenderfleet.fleetarray.length <= 0) { break; }
+                this.attackunit(attackingships[attackershipnumber], defenderfleet.fleetarray);
                 shipfinishedattack.push(attackingships[attackershipnumber]);
-                
-                console.log(defender.length);
+
+                console.log(defenderfleet.fleetarray.length);
                 attackingships.splice(attackershipnumber, 1);
 
             }
         }
+
+
     }
 
 }
