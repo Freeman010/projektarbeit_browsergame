@@ -32,7 +32,7 @@ export default class Battlesystem {
 
                         if (target.hull <= 0) {
 
-                            
+
                             console.log(target.name + " wurde zerstört");
                             defenderlist.splice(defenderlist.indexOf(target), 1);
                             break;
@@ -74,14 +74,19 @@ export default class Battlesystem {
     }
     attackunit(myunit, defenderlist) {
 
+        console.log("start von attackunit");
         if (myunit instanceof Unit && Array.isArray(defenderlist)) {
+            console.log("attack unit nach dem ersten if");
             while (myunit.attackenergy >= 0) {
                 if (defenderlist.length <= 0) {
+                    console.log(defenderlist.length+" länge der defenderliste")
                     break;
                 }
                 if (myunit.attackenergy <= 0) {
+                    console.log(myunit.attackenergy+" attackenergy");
                     break;
                 }
+                console.log("in der while nach den 2 ifs");
                 let target = this.searchtarget(defenderlist)
                 switch (target.unittype) {
 
@@ -182,27 +187,76 @@ export default class Battlesystem {
         }
     }
     startwar(attackerfleet, defenderfleet) {
+        if (attackerfleet instanceof Fleet && defenderfleet instanceof Fleet) {
+            if (Array.isArray(attackerfleet.fleetarray) && Array.isArray(defenderfleet.fleetarray)) {
+                let attackingships = [...attackerfleet.fleetarray];
+                let shipfinishedattack = [];
 
-        if (Array.isArray(attackerfleet.fleetarray) && Array.isArray(defenderfleet.fleetarray)) {
-            let attackingships = [...attackerfleet.fleetarray];
-            let shipfinishedattack = [];
+                for (let i = 0; i < attackerfleet.fleetarray.length; i++) {
+                    let attackershipnumber = Math.floor(Math.random() * attackingships.length);
 
-            for (let i = 0; i < attackerfleet.fleetarray.length; i++) {
-                let attackershipnumber = Math.floor(Math.random() * attackingships.length);
+                    if (defenderfleet.fleetarray.length <= 0) { break; }
+                    this.attackunit(attackingships[attackershipnumber], defenderfleet.fleetarray);
+                    shipfinishedattack.push(attackingships[attackershipnumber]);
 
-                if (defenderfleet.fleetarray.length <= 0) { break; }
-                this.attackunit(attackingships[attackershipnumber], defenderfleet.fleetarray);
-                shipfinishedattack.push(attackingships[attackershipnumber]);
+                    console.log(defenderfleet.fleetarray.length);
+                    attackingships.splice(attackershipnumber, 1);
 
-                console.log(defenderfleet.fleetarray.length);
-                attackingships.splice(attackershipnumber, 1);
+                }
+            }
+        }
+    }
+    fleetattack(attackerfleet, defenderfleet, percent) {
+        if (attackerfleet instanceof Fleet && defenderfleet instanceof Fleet) {
+            if (Array.isArray(attackerfleet.fleetarray) && Array.isArray(defenderfleet.fleetarray)) {
+                let attackerpercent = Math.ceil(attackerfleet.fleetarray.length / 100 * percent)
+                let defenderpercent = Math.ceil(defenderfleet.fleetarray.length / 100 * percent)
+
+                while (attackerfleet.fleetarray.length > 0 && defenderfleet.fleetarray.length > 0) {
+                    let attackingships = [...attackerfleet.fleetarray];
+                    let defendingships = [...defenderfleet.fleetarray];
+                    let attackershipsfinishedattack = [];
+                    let defendershipsfinishedattack = [];
+                    console.log("äussere while schleife");
+
+                    while (attackingships.length > 0 && defendingships.length > 0) {
+                        console.log(attackerfleet.fleetarray.length+" attackingships");
+                        console.log(defenderfleet.fleetarray.length+" defendingships");
+                        //console.log("innere while schleife");
+                        //console.log(attackerpercent+" attackerpercent");
+                        //console.log(defenderpercent+" defenderpercent");
+                        for (let i = 0; i < attackerpercent; i++) {
+                            if (attackingships.length <= 0) { break; }
+                            let attackershipnumber = Math.floor(Math.random() * attackingships.length);
+
+                            if (defenderfleet.fleetarray.length <= 0) { break; }
+                            this.attackunit(attackingships[attackershipnumber], defenderfleet.fleetarray);
+                            attackershipsfinishedattack.push(attackingships[attackershipnumber]);
+
+                            
+                            attackingships.splice(attackershipnumber, 1);
+                            console.log("forschleife1");
+                        }
+                        for (let i = 0; i < defenderpercent; i++) {
+                            if (defendingships.length <= 0) { break; }
+                            let defendershipnumber = Math.floor(Math.random() * defendingships.length);
+
+                            if (attackerfleet.fleetarray.length <= 0) { break; }
+                            this.attackunit(defendingships[defendershipnumber], attackerfleet.fleetarray);
+                            defendershipsfinishedattack.push(defendingships[defendershipnumber]);
+
+                            
+                            defendingships.splice(defendershipnumber, 1);
+                            console.log("forschleife2");
+                        }
+                    }
+                }
+
+
 
             }
         }
-
-
     }
-
 }
 // node unitdata.js
 /*export default function attackunit(myunit, attackedunit)

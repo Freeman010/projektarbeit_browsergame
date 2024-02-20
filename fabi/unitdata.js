@@ -589,8 +589,8 @@ defendercargo.ammo = 100000;
 let attackerfleet = new Fleet(bomberarray, attackercargo);
 let defenderfleet = new Fleet(defender, defendercargo);
 
-f.startwar(attackerfleet, defenderfleet);
-
+//f.startwar(attackerfleet, defenderfleet);
+f.fleetattack(attackerfleet,defenderfleet, 5);
 /*
 
 
