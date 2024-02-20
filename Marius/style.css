@@ -5,18 +5,23 @@
   text-decoration: none;
 }
 
+:root {
+  font-size: 62.5%;
+}
+
 a {
   color: white;
 }
 
 body {
   background-image: url("img/background/background-a.jpg");
+  font-size: 1.6rem;
 }
 
 /* Header-Bereich */
 
 header {
-  width: 100vw;
+  min-width: 1000px;
   display: flex;
   justify-content: space-between;
 }
@@ -25,17 +30,17 @@ header {
   display: flex;
   justify-content: center;
   gap: 5rem;
-  width: 60vw;
+  min-width: 600px;
 }
 
 .player {
   display: flex;
   justify-content: center;
-  width: 30vw;
+  min-width: 300px;
 }
 
 .clock {
-  width: 10vw;
+  min-width: 100px;
   color: white;
 }
 
@@ -49,7 +54,7 @@ oder feste  Pixelwerte festlegen*/
 
 /* Elternteil */
 .ressources {
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: center;
   border: 2px dotted white;
@@ -59,7 +64,7 @@ oder feste  Pixelwerte festlegen*/
 
 .raw-material {
   background: rgba(255, 255, 0, 0.315);
-  width: 20vw;
+  width: 250px;
   height: 100px;
   display: flex;
   justify-content: space-evenly;
@@ -68,7 +73,7 @@ oder feste  Pixelwerte festlegen*/
 
 .products {
   background: rgba(0, 128, 0, 0.301);
-  width: 60vw;
+  width: 750px;
   height: 100px;
   display: flex;
   justify-content: space-evenly;
@@ -127,7 +132,7 @@ oder feste  Pixelwerte festlegen*/
 /* Elternteil */
 
 .main-content {
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: center;
   margin-top: 50px;
@@ -158,15 +163,15 @@ oder feste  Pixelwerte festlegen*/
 }
 
 .chat-box {
-  width: 10vw;
+  min-width: 250px;
   height: 500px;
   background: rgba(255, 0, 128, 0.445);
   border: 1px solid black;
   align-self: center;
 }
-
-/* Buttons */
-
+/*  */
+Buttons
+/*  */
 .btn {
   width: 100px;
   height: 35px;
