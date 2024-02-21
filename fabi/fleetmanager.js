@@ -6,9 +6,8 @@ class Fleet {
         this.fleetcargo = new Cargo();
         this.fleetcargo.loadcargo(loadedcargo);
         fleetarray.forEach(element => {
-            if(element instanceof Unit)
-            {
-                this.maxcargo+= element.cargo;
+            if (element instanceof Unit) {
+                this.maxcargo += element.cargo;
                 this.fleethangar += element.hangaring;
                 this.fleetfueleconsume += element.fuelconsume;
                 this.fleetammoconsume += element.ammoconsume
@@ -21,10 +20,15 @@ class Fleet {
     static fleethangar;
     static fleetfueleconsume;
     static fleetammoconsume;
-    
+
+    resetenergy() {
+        this.fleetarray.forEach(element => {
+            element.attackenergy = 100;
+        });
+    }
 }
-class Cargo{
-    constructor(){
+class Cargo {
+    constructor() {
         this.totalcargo = 0;
         this.ore = 0;
         this.semiconductor = 0;
@@ -48,11 +52,11 @@ class Cargo{
     static ammo = 0;
     static microchips = 0;
 
-    static hangaring = 0 ;
+    static hangaring = 0;
 
 
 
-    loadcargo(loadingcargo){
+    loadcargo(loadingcargo) {
         this.ore = loadingcargo.ore;
         this.semiconductor = loadingcargo.semiconductor;
         this.chemicals = loadingcargo.chemicals;
@@ -64,9 +68,9 @@ class Cargo{
         this.microchips = loadingcargo.microchips;
 
     }
-    
+
 }
 export {
-Fleet,
-Cargo
+    Fleet,
+    Cargo
 };

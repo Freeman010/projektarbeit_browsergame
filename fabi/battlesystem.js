@@ -79,15 +79,18 @@ export default class Battlesystem {
             console.log("attack unit nach dem ersten if");
             while (myunit.attackenergy >= 0) {
                 if (defenderlist.length <= 0) {
-                    console.log(defenderlist.length+" länge der defenderliste")
+                    console.log(defenderlist.length + " länge der defenderliste")
                     break;
                 }
                 if (myunit.attackenergy <= 0) {
-                    console.log(myunit.attackenergy+" attackenergy");
+                    console.log(myunit.attackenergy + " attackenergy");
                     break;
                 }
                 console.log("in der while nach den 2 ifs");
                 let target = this.searchtarget(defenderlist)
+                //console.log(target.unittype);
+                //console.log(myunit.unittype);
+                //console.log(defenderlist);
                 switch (target.unittype) {
 
                     case Unit.unittype.leichterjaeger: {
@@ -180,7 +183,9 @@ export default class Battlesystem {
                         break;
                     }
                     default: {
-                        // Code für den Fall, das nichts zutrifft
+                        console.log("default");
+                        //myunit.attackenergy = 0;
+                        break;
                     }
                 }
             }
@@ -220,8 +225,8 @@ export default class Battlesystem {
                     console.log("äussere while schleife");
 
                     while (attackingships.length > 0 && defendingships.length > 0) {
-                        console.log(attackerfleet.fleetarray.length+" attackingships");
-                        console.log(defenderfleet.fleetarray.length+" defendingships");
+                        console.log(attackerfleet.fleetarray.length + " attackingships");
+                        console.log(defenderfleet.fleetarray.length + " defendingships");
                         //console.log("innere while schleife");
                         //console.log(attackerpercent+" attackerpercent");
                         //console.log(defenderpercent+" defenderpercent");
@@ -233,7 +238,7 @@ export default class Battlesystem {
                             this.attackunit(attackingships[attackershipnumber], defenderfleet.fleetarray);
                             attackershipsfinishedattack.push(attackingships[attackershipnumber]);
 
-                            
+
                             attackingships.splice(attackershipnumber, 1);
                             console.log("forschleife1");
                         }
@@ -245,11 +250,13 @@ export default class Battlesystem {
                             this.attackunit(defendingships[defendershipnumber], attackerfleet.fleetarray);
                             defendershipsfinishedattack.push(defendingships[defendershipnumber]);
 
-                            
+
                             defendingships.splice(defendershipnumber, 1);
                             console.log("forschleife2");
                         }
                     }
+                    attackerfleet.resetenergy();
+                    defenderfleet.resetenergy();
                 }
 
 
@@ -257,6 +264,7 @@ export default class Battlesystem {
             }
         }
     }
+
 }
 // node unitdata.js
 /*export default function attackunit(myunit, attackedunit)
