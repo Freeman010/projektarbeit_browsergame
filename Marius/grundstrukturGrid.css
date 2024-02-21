@@ -45,12 +45,12 @@ header {
 }
 
 /* Ressourcen-Bereich
-1. Elternteil "ressources" erhält 100vw
-2. Kinder "raw-material" und "products" 80vw
-hier ist folgendes zu beachten:
-Beim verkleinern des Bildschirms, gehen die Enkelkinder 
-ineinander über und verformen sich -> evtl. "space-evenly" mit gap ersetzen,
-oder feste  Pixelwerte festlegen*/
+  1. Elternteil "ressources" erhält 100vw
+  2. Kinder "raw-material" und "products" 80vw
+  hier ist folgendes zu beachten:
+  Beim verkleinern des Bildschirms, gehen die Enkelkinder 
+  ineinander über und verformen sich -> evtl. "space-evenly" mit gap ersetzen,
+  oder feste  Pixelwerte festlegen*/
 
 /* Elternteil */
 .ressources {
@@ -128,12 +128,12 @@ oder feste  Pixelwerte festlegen*/
 /* Grid-Versuch */
 
 .main-content {
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1px repeat(2, 1fr) 1px repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  /* grid-column-gap: 10px; */
+  /* grid-row-gap: 5px; */
+  /* margin-top: 50px; */
   border: 2px dotted white;
 }
 
@@ -142,7 +142,8 @@ oder feste  Pixelwerte festlegen*/
 /* Grid-Versuch */
 
 .menu-box {
-  width: 250px;
+  grid-area: 2 / 3 / 5 / 4;
+  min-width: 250px;
   height: 400px;
   background: rgba(255, 153, 0, 0.425);
   border: 1px solid black;
@@ -151,18 +152,21 @@ oder feste  Pixelwerte festlegen*/
   align-items: center;
   justify-content: center;
   gap: 20px;
-  align-self: center;
 }
 
 .content-box {
+  grid-area: 1 / 5 / 5 / 8;
+
   min-width: 1000px;
   height: 750px;
   background: rgba(230, 35, 35, 0.527);
   border: 1px solid black;
-  margin: 0 25px;
+  margin: 50px 25px 0 25px;
+  align-self: center;
 }
 
 .chat-box {
+  grid-area: 2 / 8 / 5 / 9;
   min-width: 250px;
   height: 500px;
   background: rgba(255, 0, 128, 0.445);
