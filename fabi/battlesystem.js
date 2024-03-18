@@ -77,6 +77,7 @@ export default class Battlesystem {
         console.log("start von attackunit");
         if (myunit instanceof Unit && Array.isArray(defenderlist)) {
             console.log("attack unit nach dem ersten if");
+            //unendliche schleife
             while (myunit.attackenergy >= 0) {
                 if (defenderlist.length <= 0) {
                     console.log(defenderlist.length + " länge der defenderliste")
@@ -223,6 +224,9 @@ export default class Battlesystem {
                     let attackershipsfinishedattack = [];
                     let defendershipsfinishedattack = [];
                     console.log("äussere while schleife");
+                    
+
+                    
 
                     while (attackingships.length > 0 && defendingships.length > 0) {
                         console.log(attackerfleet.fleetarray.length + " attackingships");
@@ -254,9 +258,11 @@ export default class Battlesystem {
                             defendingships.splice(defendershipnumber, 1);
                             console.log("forschleife2");
                         }
+
                     }
-                    attackerfleet.resetenergy();
-                    defenderfleet.resetenergy();
+
+                    //attackerfleet.resetenergy();
+                    //defenderfleet.resetenergy();
                 }
 
 

@@ -26,6 +26,7 @@ class Fleet {
             element.attackenergy = 100;
         });
     }
+    
 }
 class Cargo {
     constructor() {
